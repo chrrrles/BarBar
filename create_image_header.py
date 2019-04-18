@@ -1,3 +1,4 @@
+from __future__ import print_function
 from PIL import Image
 from sys import argv
 
@@ -20,8 +21,8 @@ if __name__ == "__main__":
         image_const += "    { %s },\n" % ", ".join(str(x) for x in column)
     image_const += "};\n"
 
-    print "#define NUM_LEDS %d" % h
-    print "#define RESOLUTION %d" % w
-    print "CRGB leds[%d];" % h
-    print ""
-    print image_const
+    print("#define NUM_LEDS %d" % h)
+    print("#define RESOLUTION %d" % w)
+    print("CRGB leds[%d];" % h)
+    print("")
+    print(image_const)
